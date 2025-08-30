@@ -1,0 +1,31 @@
+﻿name: Deploy to Fly.io (ASD static)
+
+on:
+  push:
+    branches: [ "main" ]
+    paths:
+      - 'parametric-static/**'
+      - 'Dockerfile'
+      - 'Caddyfile'
+      - 'fly.toml'
+      - '.github/workflows/deploy-flyio.yml'
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    env:
+      FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+
+      # You bake locally, so no build step here that mutates files
+
+      - name: Install flyctl
+        uses: superfly/flyctl-actions/setup-flyctl@v1
+
+      - name: Deploy
+        run: flyctl deploy --remote-only

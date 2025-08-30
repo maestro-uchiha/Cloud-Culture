@@ -2,6 +2,6 @@
   "SiteName": "Cloud Culture",
   "StoreUrl": "https://example.com/",
   "Description": "Clean static sites with ASD.",
-  "BaseUrl": "https://cloud-culture.replit.app/",
+  "BaseUrl": "https://cloud-culture.fly.dev/",
   "author": { "name": "Maestro" }
 }

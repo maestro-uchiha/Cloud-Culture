@@ -64,5 +64,5 @@ Disallow: /
 
 # Sitemap location
 
-Sitemap: https://cloud-culture.replit.app/sitemap.xml
+Sitemap: https://cloud-culture.fly.dev/sitemap.xml
 

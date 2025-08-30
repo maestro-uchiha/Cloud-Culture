@@ -1,0 +1,18 @@
+﻿# Keep the image small
+.git
+.gitignore
+.github/
+**/node_modules/
+parametric-static/scripts/
+parametric-static/scripts.__bak__*/
+**/*.ps1
+**/*.psm1
+**/*.bat
+**/*.cmd
+**/*.sh
+**/*.py
+**/*.exe
+**/*.dll
+**/*.msi
+**/.DS_Store
+**/Thumbs.db
