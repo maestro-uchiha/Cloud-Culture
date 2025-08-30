@@ -1,7 +1,7 @@
 ﻿{
-  "SiteName": "My ASD Site",
+  "SiteName": "Cloud Culture",
   "StoreUrl": "https://example.com/",
   "Description": "Clean static sites with ASD.",
-  "BaseUrl": "https://maestro-uchiha.github.io/my-new-asd-site/",
+  "BaseUrl": "https://cloud-culture.replit.app/",
   "author": { "name": "Maestro" }
 }

@@ -1,0 +1,30 @@
+﻿# .replit  (put this at the repo root)
+
+# --- Response headers (Static Deployments) ---
+# Replit applies these at the edge. You can add multiple blocks.
+# Docs: responseHeaders & rewrites in .replit. :contentReference[oaicite:0]{index=0}
+
+# Cache-bust resistant, long-lived static assets
+[[deployment.responseHeaders]]
+path = "/assets/*"
+name = "Cache-Control"
+value = "public, max-age=31536000, immutable"
+
+# Sensible security-ish defaults for all pages
+[[deployment.responseHeaders]]
+path = "/*"
+name = "X-Content-Type-Options"
+value = "nosniff"
+
+[[deployment.responseHeaders]]
+path = "/*"
+name = "Referrer-Policy"
+value = "strict-origin-when-cross-origin"
+
+# --- Optional rewrites (keep commented unless you need SPA behavior) ---
+# If you ever convert to an SPA, uncomment below to route all unknown paths to /index.html.
+# [[deployment.rewrites]]
+# from = "/*"
+# to   = "/index.html"
+
+# Note: Custom 404 works automatically—just keep parametric-static/404.html in your Public directory. :contentReference[oaicite:1]{index=1}
